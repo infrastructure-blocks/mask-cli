@@ -1,0 +1,2 @@
+# rust-binary-template
+
