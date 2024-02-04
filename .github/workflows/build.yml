@@ -17,9 +17,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - run: cargo install cargo-commander
-      - name: Compile
-        run: cargo build
+      - run: cargo install cargo-tarpaulin
       - name: Lint
         run: cargo cmd lint
-      - name: Test
-        run: cargo test
+      - name: Test with coverage
+        run: cargo cmd test:coverage:lcov
+      - uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.codecov-token }}
