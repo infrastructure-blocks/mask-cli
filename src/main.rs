@@ -1,4 +1,5 @@
 use clap::{Arg, ArgAction, Command};
+use rust_binary_template::{do_stuff, Config};
 
 fn main() {
     let command = Command::new("rust-binary-template")
@@ -28,5 +29,10 @@ fn main() {
             "This program holds the boilerplate, template code for rust binaries. \
         It isn't meant to be used on its own.",
         );
-    command.get_matches();
+    let matches = command.get_matches();
+    do_stuff(Config {
+        flag: matches.get_flag("flag"),
+        option: matches.get_one::<String>("option").cloned(),
+        positional: matches.get_one::<String>("positional").unwrap().to_string(),
+    })
 }
