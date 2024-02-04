@@ -18,10 +18,8 @@ jobs:
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - run: cargo install cargo-commander
       - run: cargo install cargo-tarpaulin
-      - name: Lint
-        run: cargo cmd lint
-      - name: Test with coverage
-        run: cargo cmd test:coverage:lcov
+      - run: cargo cmd lint
+      - run: cargo cmd test:coverage:lcov
       - uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.codecov-token }}
