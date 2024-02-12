@@ -1,6 +1,7 @@
 # rust-binary-template
 [![Build](https://github.com/infrastructure-blocks/rust-binary-template/actions/workflows/build.yml/badge.svg)](https://github.com/infrastructure-blocks/rust-binary-template/actions/workflows/build.yml)
 [![Trigger Update From Template](https://github.com/infrastructure-blocks/rust-binary-template/actions/workflows/trigger-update-from-template.yml/badge.svg)](https://github.com/infrastructure-blocks/rust-binary-template/actions/workflows/trigger-update-from-template.yml)
+[![codecov](https://codecov.io/gh/infrastructure-blocks/rust-binary-template/graph/badge.svg?token=JHZTAJ66FL)](https://codecov.io/gh/infrastructure-blocks/rust-binary-template)
 
 Template repository for rust binaries. Upon instantiating, go through the following checklist:
 - Update [package name](./Cargo.toml)
