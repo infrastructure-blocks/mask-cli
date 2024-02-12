@@ -1,5 +1,5 @@
 use clap::{Arg, ArgAction, Command};
-use rust_binary_template::{do_stuff, Config};
+use mask_cli::{do_stuff, Config};
 
 fn main() {
     let command = Command::new("rust-binary-template")

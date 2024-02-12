@@ -1,3 +1,5 @@
+mod config;
+
 #[derive(Debug)]
 pub struct Config {
     pub flag: bool,
