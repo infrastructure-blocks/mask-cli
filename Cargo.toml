@@ -1,0 +1,13 @@
+[package]
+name = "rust-binary-template"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4.18" }
+
+[package.metadata.commands]
+lint = "cargo fmt -- --check && cargo clippy --all-targets --all-features -- -D warnings"
+"test:coverage:lcov" = "cargo tarpaulin --out lcov --output-dir coverage"
+"test:doc" = "cargo test --doc"
+"test:unit" = "cargo test --bins --lib"
